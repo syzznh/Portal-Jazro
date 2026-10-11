@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Oct 11, 2026 at 09:00 AM
+-- Generation Time: Oct 11, 2026 at 09:23 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -69,12 +69,12 @@ CREATE TABLE `attendance` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `booklet`
+-- Table structure for table `blooket`
 --
 
-CREATE TABLE `booklet` (
-  `booklet_id` int(11) NOT NULL,
-  `booklet_name` varchar(200) NOT NULL,
+CREATE TABLE `blooket` (
+  `blooket_id` int(11) NOT NULL,
+  `blooket_name` varchar(200) NOT NULL,
   `category` varchar(100) DEFAULT NULL,
   `level` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -398,10 +398,10 @@ ALTER TABLE `attendance`
   ADD KEY `admin_id` (`admin_id`);
 
 --
--- Indexes for table `booklet`
+-- Indexes for table `blooket`
 --
-ALTER TABLE `booklet`
-  ADD PRIMARY KEY (`booklet_id`);
+ALTER TABLE `blooket`
+  ADD PRIMARY KEY (`blooket_id`);
 
 --
 -- Indexes for table `branch`
@@ -568,10 +568,10 @@ ALTER TABLE `attendance`
   MODIFY `attendance_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `booklet`
+-- AUTO_INCREMENT for table `blooket`
 --
-ALTER TABLE `booklet`
-  MODIFY `booklet_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `blooket`
+  MODIFY `blooket_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `branch`
@@ -808,7 +808,7 @@ ALTER TABLE `student`
 --
 ALTER TABLE `student_booklet`
   ADD CONSTRAINT `student_booklet_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`),
-  ADD CONSTRAINT `student_booklet_ibfk_2` FOREIGN KEY (`booklet_id`) REFERENCES `booklet` (`booklet_id`);
+  ADD CONSTRAINT `student_booklet_ibfk_2` FOREIGN KEY (`booklet_id`) REFERENCES `blooket` (`blooket_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
