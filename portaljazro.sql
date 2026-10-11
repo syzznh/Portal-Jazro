@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Oct 11, 2026 at 08:13 AM
+-- Generation Time: Oct 11, 2026 at 09:00 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -188,20 +188,6 @@ CREATE TABLE `module` (
   `module_category` varchar(100) DEFAULT NULL,
   `level` varchar(50) DEFAULT NULL,
   `description` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `note`
---
-
-CREATE TABLE `note` (
-  `note_id` int(11) NOT NULL,
-  `material_id` int(11) NOT NULL,
-  `title` varchar(200) NOT NULL,
-  `content` text DEFAULT NULL,
-  `created_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -471,13 +457,6 @@ ALTER TABLE `module`
   ADD PRIMARY KEY (`module_id`);
 
 --
--- Indexes for table `note`
---
-ALTER TABLE `note`
-  ADD PRIMARY KEY (`note_id`),
-  ADD KEY `material_id` (`material_id`);
-
---
 -- Indexes for table `organization`
 --
 ALTER TABLE `organization`
@@ -637,12 +616,6 @@ ALTER TABLE `module`
   MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `note`
---
-ALTER TABLE `note`
-  MODIFY `note_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `organization`
 --
 ALTER TABLE `organization`
@@ -775,12 +748,6 @@ ALTER TABLE `enrollment`
 ALTER TABLE `learning_material`
   ADD CONSTRAINT `learning_material_ibfk_1` FOREIGN KEY (`class_id`) REFERENCES `classes` (`class_id`),
   ADD CONSTRAINT `learning_material_ibfk_2` FOREIGN KEY (`admin_id`) REFERENCES `admin` (`admin_id`);
-
---
--- Constraints for table `note`
---
-ALTER TABLE `note`
-  ADD CONSTRAINT `note_ibfk_1` FOREIGN KEY (`material_id`) REFERENCES `learning_material` (`material_id`);
 
 --
 -- Constraints for table `parent`
