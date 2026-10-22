@@ -19,26 +19,3 @@ Admin Portal
 
 Project Purpose
 - To provide a centralized, organized, and accessible platform that improves student progress monitoring and simplifies administrative management across JAZRO branches.
-
-Database Setup
-
-Install and open XAMPP.
-
-Start Apache and MySQL.
-
-Open phpMyAdmin at http://localhost/phpmyadmin.
-
-Create or select the database required by the project.
-
-Open the Import tab.
-
-Select the jazro_portal_v2.sql file from this repository.
-
-Click Import or Go to execute the SQL file.
-
-Project Structure
-
-Portal-Jazro/
-├── README.md
-├── Portal Jazro ERD.svg
-└── jazro_portal_v2.sql
