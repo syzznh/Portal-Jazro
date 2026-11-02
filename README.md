@@ -19,3 +19,7 @@ Admin Portal
 
 Project Purpose
 - To provide a centralized, organized, and accessible platform that improves student progress monitoring and simplifies administrative management across JAZRO branches.
+
+
+PATH for FRONTEND ADMIN CODER
+uploads/learning_materials/[MODULE_CODE].pdf
