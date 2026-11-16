@@ -38,6 +38,11 @@ jobs:
             **/.github/**
             **/node_modules/**
             **/vendor/**
+            **/*.sql
+            **/.env
+            **/.env.*
+            **/db.php
+
             **/uploads/**
             **/*.sql
             **/.env
