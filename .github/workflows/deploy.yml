@@ -31,11 +31,14 @@ jobs:
           local-dir: ./Portal-Jazro/
           server-dir: /htdocs/
           dangerous-clean-slate: false
+
           exclude: |
             **/.git*
+            **/.git*/**
             **/.github/**
             **/node_modules/**
             **/vendor/**
+            **/uploads/**
             **/*.sql
             **/.env
             **/.env.*
