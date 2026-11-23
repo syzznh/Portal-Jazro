@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Parent Sign Up | JAZRO Portal</title>
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="css/signup.css">
+  <script src="js/signup.js" defer></script>
+</head>
+
+<body>
+
+  <main class="signup-layout">
+
+    <!-- LEFT: REGISTRATION FORM -->
+    <section class="form-panel">
+
+      <header class="signup-header">
+
+        <a href="index.html" class="brand-link">
+          <img
+            src="assets/images/logo jazro 2.png"
+            alt="JAZRO Logo"
+            class="brand-logo"
+          >
+          <span class="brand-text">
+            <strong>JAZRO</strong>
+            <small>Learning & Student<br>Progress Portal</small>
+          </span>
+        </a>
+
+        <a href="index.html" class="back-login">
+          ← Back to Log In
+        </a>
+
+      </header>
+
+      <div class="form-content">
+
+        <div class="form-heading">
+          <span class="eyebrow">
+            ✦ JAZRO PARENT REGISTRATION
+          </span>
+
+          <h1>Create Your <span>Account.</span></h1>
+
+          <p>
+            Join the JAZRO parent community and stay
+            connected with your child's learning journey.
+          </p>
+        </div>
+
+
+        <!-- SIGNUP FORM -->
+        <form id="signupForm" novalidate>
+
+          <div class="fields-grid">
+
+            <!-- FULL NAME -->
+            <div class="field">
+              <label for="fullName">Parent Full Name</label>
+              <input
+                id="fullName"
+                name="fullName"
+                type="text"
+                placeholder="e.g. Encik Razi"
+                autocomplete="name"
+                maxlength="100"
+                required
+              >
+            </div>
+
+            <!-- USERNAME -->
+            <div class="field">
+              <label for="username">Username</label>
+              <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="Choose a username"
+                autocomplete="username"
+                minlength="3"
+                maxlength="24"
+                required
+              >
+            </div>
+
+            <!-- EMAIL -->
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="example@email.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <!-- PHONE -->
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="e.g. 0123456789"
+                autocomplete="tel"
+                inputmode="tel"
+                required
+              >
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="field">
+              <label for="password">Password</label>
+
+              <div class="password-wrap">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="Minimum 8 characters"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-target="password"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >Show</button>
+              </div>
+            </div>
+
+            <!-- CONFIRM PASSWORD -->
+            <div class="field">
+              <label for="confirmPassword">
+                Confirm Password
+              </label>
+
+              <div class="password-wrap">
+                <input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  placeholder="Re-enter your password"
+                  autocomplete="new-password"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-target="confirmPassword"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >Show</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PASSWORD HINT -->
+          <p class="password-hint">
+            <span>✦</span>
+            Use at least 8 characters, including a letter
+            and a number.
+          </p>
+
+          <!-- AGREEMENT -->
+          <label class="agreement">
+            <input type="checkbox" id="agreement" required>
+            <span>
+              I confirm that my registration information
+              is accurate and agree to the applicable
+              portal terms and privacy notice.
+            </span>
+          </label>
+
+          <!-- VALIDATION MESSAGE -->
+          <p
+            class="form-message"
+            id="formMessage"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="submit-btn">
+            Create Parent Account
+            <span aria-hidden="true">→</span>
+          </button>
+
+        </form>
+
+        <p class="login-prompt">
+          Already have an account?
+          <a href="index.html">Log In</a>
+        </p>
+
+      </div>
+
+      <footer class="form-footer">
+        © <span id="currentYear"></span>
+        JAZRO Robotic Academy
+      </footer>
+
+    </section>
+
+
+    <!-- RIGHT: ROBOT PANEL -->
+    <section class="illustration-panel">
+
+      <div class="illustration-top">
+        <span class="mini-label">
+          <span class="mini-dot"></span>
+          WELCOME TO JAZRO
+        </span>
+      </div>
+
+      <div class="illustration-copy">
+        <h2>
+          Every Great Journey
+          <span>Starts Here!</span>
+        </h2>
+
+        <p>
+          Be part of your child's learning adventure.
+          Learn, grow and celebrate every achievement
+          together.
+        </p>
+      </div>
+
+      <div class="robot-area">
+        <div class="robot-glow"></div>
+
+        <img
+          src="assets/images/wavin-robot.png"
+          alt="Friendly robot waving"
+          class="waving-robot"
+        >
+      </div>
+
+      <div class="illustration-bottom">
+        <span>✦ LEARN</span>
+        <span>✦ GROW</span>
+        <span>✦ ACHIEVE</span>
+      </div>
+
+      <div class="decor-circle decor-one"></div>
+      <div class="decor-circle decor-two"></div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

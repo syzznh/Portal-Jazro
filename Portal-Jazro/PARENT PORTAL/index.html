@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Parent Login | JAZRO Portal</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="css/login.css">
+
+  <!-- Login JavaScript -->
+  <script src="js/login.js" defer></script>
+</head>
+
+<body>
+
+  <main class="login-layout">
+
+    <!-- LEFT WELCOME PANEL -->
+    <section class="welcome-panel">
+
+      <!-- JAZRO BRAND -->
+      <div class="brand-area">
+
+        <img
+          src="assets/images/logo jazro 2.png"
+          alt="JAZRO Logo"
+          class="brand-logo"
+        >
+
+        <div class="brand-divider"></div>
+
+        <div class="brand-name">
+          <strong>JAZRO</strong>
+          <span>PARENT PORTAL</span>
+        </div>
+
+      </div>
+
+
+      <!-- WELCOME TEXT -->
+      <div class="welcome-content">
+
+        <div class="welcome-tag">
+          <span class="tag-dot"></span>
+          YOUR CHILD'S LEARNING JOURNEY
+        </div>
+
+        <h1>
+          Welcome to
+          <span>JAZRO</span>
+          Learning & Student <br> 
+          Progress Portal
+        </h1>
+
+        <p>
+          Access your child's learning progress,
+          materials, assessments and more.
+          Stay connected with every step of
+          their learning journey.
+        </p>
+
+      </div>
+
+
+      <!-- ROBOT FAMILY ILLUSTRATION -->
+      <div class="illustration-area">
+
+        <div class="illustration-glow"></div>
+
+        <img
+          src="assets/images/family-robot.png"
+          alt="Robot family learning together"
+          class="family-robot"
+        >
+
+      </div>
+
+
+      <!-- BOTTOM DECORATION -->
+      <div class="welcome-bottom">
+
+        <div class="welcome-highlight">
+          <span class="highlight-icon">✦</span>
+          <span>LEARN</span>
+        </div>
+
+        <span class="highlight-divider"></span>
+
+        <div class="welcome-highlight">
+          <span class="highlight-icon">✦</span>
+          <span>GROW</span>
+        </div>
+
+        <span class="highlight-divider"></span>
+
+        <div class="welcome-highlight">
+          <span class="highlight-icon">✦</span>
+          <span>ACHIEVE</span>
+        </div>
+
+      </div>
+
+      <!-- DECORATIVE SHAPES -->
+      <div class="decor-circle circle-one"></div>
+      <div class="decor-circle circle-two"></div>
+      <div class="decor-circle circle-three"></div>
+
+    </section>
+
+
+    <!-- RIGHT LOGIN PANEL -->
+    <section class="form-panel">
+
+      <!-- TOP LABEL -->
+      <div class="form-top">
+
+        <div class="form-top-label">
+          <span class="online-dot"></span>
+          JAZRO PARENT ACCESS
+        </div>
+
+      </div>
+
+
+      <!-- FORM CONTENT -->
+      <div class="form-container">
+
+        <!-- SMALL WELCOME ICON -->
+        <div class="form-header-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2"></path>
+          </svg>
+
+        </div>
+
+
+        <!-- TITLE -->
+        <div class="form-heading">
+
+          <h2>Welcome Back!</h2>
+
+          <p class="heading-description">
+            Parent Login
+          </p>
+
+          <p class="form-description">
+            Sign in to access your child's
+            learning progress portal.
+          </p>
+
+        </div>
+
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm" novalidate>
+
+          <!-- USERNAME -->
+          <div class="form-group">
+
+            <label for="username">
+              Username
+            </label>
+
+            <div class="input-container">
+
+              <svg
+                class="input-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M4 21a8 8 0 0 1 16 0"></path>
+              </svg>
+
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+                autocomplete="username"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- PASSWORD -->
+          <div class="form-group">
+
+            <label for="password">
+              Password
+            </label>
+
+            <div class="input-container">
+
+              <svg
+                class="input-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect
+                  x="4"
+                  y="10"
+                  width="16"
+                  height="11"
+                  rx="2"
+                ></rect>
+
+                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+              </svg>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              >
+
+              <!-- SHOW PASSWORD -->
+              <button
+                type="button"
+                class="password-toggle"
+                id="togglePassword"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"
+                  ></path>
+
+                  <circle cx="12" cy="12" r="3"></circle>
+
+                </svg>
+
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- REMEMBER ME -->
+          <div class="form-options">
+
+            <label class="remember-label">
+
+              <input
+                type="checkbox"
+                id="rememberMe"
+              >
+
+              <span>Remember me</span>
+
+            </label>
+
+            <span class="secure-label">
+              Secure Parent Access
+            </span>
+
+          </div>
+
+
+          <!-- ERROR MESSAGE -->
+          <p
+            id="formMessage"
+            class="form-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+
+          <!-- LOGIN BUTTON -->
+          <button
+            type="submit"
+            class="login-button"
+          >
+
+            <span>Log In</span>
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m13 6 6 6-6 6"></path>
+            </svg>
+
+          </button>
+
+        </form>
+
+
+        <!-- SIGN UP SECTION -->
+        <div class="signup-section">
+
+          <p>
+            Don't have an account?
+            <a href="signup.html"> 
+            </a>
+          </p>
+
+          <a
+            href="signup.html"
+            class="signup-button"
+          >
+            Create Parent Account
+          </a>
+
+        </div>
+
+
+        <!-- LEARNING FEATURES -->
+        <div class="form-features">
+
+          <div class="feature">
+
+            <span class="feature-symbol">📚</span>
+
+            <span>Learning Materials</span>
+
+          </div>
+
+          <div class="feature">
+
+            <span class="feature-symbol">📊</span>
+
+            <span>Student Progress</span>
+
+          </div>
+
+          <div class="feature">
+
+            <span class="feature-symbol">🏆</span>
+
+            <span>Achievements</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FORM FOOTER -->
+      <div class="form-footer">
+
+        <p>
+          © <span id="currentYear"></span>
+          JAZRO Robotic Academy
+        </p>
+
+        <span>Empowering Young Innovators</span>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+
