@@ -1,0 +1,91 @@
+/* JAZRO ACHIEVEMENTS PAGE */
+.achievements-content{width:100%;max-width:1300px;margin:0 auto;padding:22px clamp(18px,3vw,40px);display:flex;flex:1;flex-direction:column;gap:18px;min-width:0}
+.page-heading{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.page-heading h2{color:var(--royal-blue);font-size:clamp(25px,2.7vw,35px);font-weight:900;line-height:1.2}
+.page-heading p{margin-top:6px;color:var(--muted-text);font-size:12px;font-weight:700;line-height:1.5}
+.page-badge{display:inline-block;padding:6px 13px;margin-bottom:8px;background:#eaf6ff;border:1px solid #cfebff;border-radius:30px;color:#087dbd;font-size:10px;font-weight:900;letter-spacing:1px}
+.back-button{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;padding:11px 14px;border:1px solid #d1e5fc;border-radius:11px;background:#eef7ff;color:var(--royal-blue);font-size:11px;font-weight:900}
+.back-button:hover{background:#dcefff}
+.student-mini-card{display:flex;align-items:center;gap:15px;padding:13px 19px;background:linear-gradient(110deg,#0800a4,#1265c4);border-radius:17px;color:white;box-shadow:0 7px 20px rgba(8,0,164,.12)}
+.mini-avatar{width:58px;height:58px;flex-shrink:0;overflow:hidden;border:3px solid white;border-radius:14px;background:white}
+.mini-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.mini-info{min-width:0;display:flex;flex-direction:column;gap:2px}
+.mini-info span{font-size:9px;font-weight:900;letter-spacing:1px;color:#c8dcff}
+.mini-info h3{font-size:18px;font-weight:900}
+.mini-info p{font-size:11px;color:#e1ebff;font-weight:700}
+.mini-star{margin-left:auto;color:#c9ef49;font-size:37px}
+.achievement-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.overview-item{display:flex;align-items:center;gap:13px;padding:13px 16px;background:white;border:1px solid #e2eaf4;border-radius:14px;box-shadow:0 4px 14px rgba(20,55,105,.04)}
+.overview-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;font-size:22px;background:#eff7ff}
+.report-icon{background:#f0f1ff}
+.overview-item div{display:flex;flex-direction:column;gap:2px}
+.overview-item strong{font-size:13px;color:#101b52;font-weight:900}
+.overview-item small{font-size:10px;color:#75839a;font-weight:700}
+.achievement-panel{background:white;border:1px solid #e2eaf4;border-radius:18px;box-shadow:0 5px 18px rgba(20,55,105,.05);overflow:hidden}
+.tabs{display:flex;gap:7px;padding:12px 17px;border-bottom:1px solid #e8eef6;background:#fbfdff}
+.tab-button{border:0;border-radius:10px;padding:10px 15px;background:transparent;color:#68768c;font:800 12px Nunito,sans-serif;cursor:pointer;transition:.2s}
+.tab-button.active{background:#0800a4;color:white;box-shadow:0 4px 11px rgba(8,0,164,.17)}
+.tab-panel{padding:20px}
+.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:17px}
+.panel-heading h3{font-size:18px;color:#101b52;font-weight:900}
+.panel-heading p{margin-top:3px;font-size:11px;color:#77849a;font-weight:700;line-height:1.5}
+.sample-label{padding:6px 10px;border-radius:30px;background:#fff7df;color:#a16b00;font-size:9px;font-weight:900;letter-spacing:.6px;white-space:nowrap}
+.certificate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.certificate-card{min-width:0;border:1px solid #e4eaf2;border-radius:14px;overflow:hidden;background:#fff;transition:transform .2s,box-shadow .2s}
+.certificate-card:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(20,55,105,.09)}
+.certificate-art{min-height:245px;padding:18px 15px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:linear-gradient(145deg,#fffdf4,#fff4d6);border:9px double #d8b65b;color:#243b71}
+.certificate-art:before,.certificate-art:after{content:"✦";position:absolute;color:rgba(202,164,66,.32);font-size:58px}
+.certificate-art:before{top:8px;left:14px}.certificate-art:after{bottom:8px;right:14px}
+.certificate-art-blue{background:linear-gradient(145deg,#f5fbff,#dff2ff);border-color:#6aa8dc}
+.cert-topline{font-size:9px;font-weight:900;letter-spacing:1.5px;color:#6b7893}
+.cert-medal{width:43px;height:43px;display:grid;place-items:center;margin:8px 0 4px;border-radius:50%;background:#e6c56b;color:white;font-size:25px;box-shadow:0 3px 8px rgba(0,0,0,.12)}
+.certificate-art-blue .cert-medal{background:#4b9bd4}
+.cert-small{font-size:9px;font-weight:800;letter-spacing:2px;color:#78839a}
+.certificate-art>strong{font-size:25px;line-height:1.1;letter-spacing:1px;color:#173c77}
+.cert-recipient{margin-top:8px;font-size:20px;font-weight:900;color:#172c57;border-bottom:1px solid #c6a958;padding:0 20px 4px}
+.cert-description{margin-top:7px;font-size:10px;font-weight:700;color:#68758d}
+.cert-ribbon{margin-top:10px;font-size:9px;font-weight:900;letter-spacing:1px;color:#9b7425}
+.certificate-details{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 13px}
+.certificate-details h4{font-size:12px;color:#152653;font-weight:900}
+.certificate-details p{margin-top:3px;font-size:10px;color:#7b879a;font-weight:700}
+.outline-button{padding:8px 11px;border:1px solid #cbdcf2;border-radius:9px;background:#f5faff;color:#0800a4;font:900 10px Nunito,sans-serif;cursor:pointer;white-space:nowrap}
+.outline-button:hover{background:#e7f2ff}
+.preview-note{font-size:10px;color:#8b96a8;font-weight:700;line-height:1.5}
+#certificatesPanel>.preview-note{margin-top:12px}
+.report-heading{align-items:flex-end}
+.term-select-wrap{display:flex;flex-direction:column;gap:5px;color:#64748b;font-size:10px;font-weight:900;white-space:nowrap}
+.term-select-wrap select{min-width:145px;padding:9px 30px 9px 11px;border:1px solid #d7e3f1;border-radius:9px;background:#f8fbff;color:#172c57;font:800 11px Nunito,sans-serif}
+.report-summary{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.report-student,.overall-score{padding:15px 17px;border-radius:13px;background:#f4f8ff;border:1px solid #e2ebf8;display:flex;flex-direction:column;gap:3px}
+.report-student span,.overall-score span{font-size:9px;font-weight:900;letter-spacing:1px;color:#7b8ca8}
+.report-student strong{font-size:16px;color:#14265a;font-weight:900}
+.report-student small,.overall-score small{font-size:10px;color:#75839a;font-weight:700}
+.overall-score{background:linear-gradient(110deg,#0800a4,#1765c6);border:0;color:white}
+.overall-score span,.overall-score small{color:#d7e5ff}
+.overall-score strong{font-size:27px;line-height:1.1;font-weight:900;color:#fff}
+.report-section-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:19px 0 9px}
+.report-section-title h4{font-size:14px;color:#152653;font-weight:900}
+.report-section-title span{font-size:10px;color:#7b879a;font-weight:800}
+.performance-table-wrap{overflow-x:auto;border:1px solid #e6edf5;border-radius:11px}
+.performance-table{width:100%;border-collapse:collapse;min-width:420px}
+.performance-table th{padding:10px 12px;background:#f4f8fd;color:#687991;text-align:left;font-size:10px;font-weight:900}
+.performance-table td{padding:11px 12px;border-top:1px solid #edf1f6;color:#26365b;font-size:11px;font-weight:800}
+.performance-pill{display:inline-block;padding:5px 9px;border-radius:20px;font-size:9px;font-weight:900}
+.performance-pill.excellent{background:#e7f8ed;color:#16834b}.performance-pill.good{background:#eaf3ff;color:#2367b5}
+.tutor-remark{display:flex;gap:12px;margin-top:15px;padding:14px;border-radius:12px;background:#f8faff;border:1px solid #e5edf7}
+.remark-icon{width:35px;height:35px;flex-shrink:0;display:grid;place-items:center;border-radius:10px;background:#eaf4ff;font-size:17px}
+.tutor-remark span{font-size:9px;font-weight:900;letter-spacing:1px;color:#7183a0}
+.tutor-remark p{margin-top:4px;font-size:11px;line-height:1.6;color:#52627b;font-weight:700}
+.report-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
+.primary-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:10px 15px;border:0;border-radius:10px;background:#0800a4;color:#fff;font:900 11px Nunito,sans-serif;cursor:pointer;box-shadow:0 5px 13px rgba(8,0,164,.15)}
+.primary-button:hover{background:#1712c5}
+.modal-backdrop{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px;background:rgba(9,20,50,.58)}
+.certificate-modal{position:relative;width:min(540px,100%);padding:22px;background:#fff;border-radius:17px;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.modal-close{position:absolute;z-index:2;top:9px;right:12px;width:32px;height:32px;border:0;border-radius:50%;background:#edf3fa;color:#23345b;font-size:23px;cursor:pointer}
+.modal-certificate-art{min-height:300px}
+.modal-caption{text-align:center;margin:12px 0;color:#7b879a;font-size:10px;font-weight:800}
+.certificate-modal>.primary-button{width:100%}
+[hidden]{display:none!important}
+@media(max-width:800px){.certificate-grid{grid-template-columns:1fr}.certificate-art{min-height:230px}}
+@media(max-width:700px){.achievements-content{padding:18px 16px;gap:15px}.page-heading{align-items:flex-start;flex-direction:column}.back-button{align-self:flex-start}.achievement-overview{gap:8px}.overview-item{padding:11px 9px;gap:8px}.overview-icon{width:35px;height:35px;font-size:18px}.overview-item strong{font-size:11px}.overview-item small{font-size:9px}.tabs{padding:10px;gap:4px}.tab-button{padding:9px 10px;font-size:11px}.tab-panel{padding:14px}.panel-heading{align-items:flex-start}.report-heading{flex-direction:column}.term-select-wrap{width:100%}.term-select-wrap select{width:100%}.report-summary{grid-template-columns:1fr}.report-actions{align-items:flex-start;flex-direction:column}.report-actions .primary-button{width:100%}.mini-star{font-size:28px}}
+@media(prefers-reduced-motion:reduce){.certificate-card,.tab-button{transition:none}}

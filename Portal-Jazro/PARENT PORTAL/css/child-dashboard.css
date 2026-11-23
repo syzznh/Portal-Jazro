@@ -1,0 +1,752 @@
+
+/* =========================================
+   JAZRO PARENT PORTAL
+   STUDENT PROGRESS PAGE
+   ========================================= */
+
+/* PAGE CONTENT */
+
+.progress-content {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  padding: 20px clamp(18px, 3vw, 40px);
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 19px;
+  min-width: 0;
+}
+
+/* =========================================
+   PAGE INTRODUCTION
+   ========================================= */
+
+.progress-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.intro-text {
+  min-width: 0;
+}
+
+.page-badge {
+  display: inline-block;
+
+  padding: 6px 13px;
+  margin-bottom: 8px;
+
+  background: #eaf6ff;
+  border: 1px solid #cfebff;
+  border-radius: 30px;
+
+  color: #087dbd;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.progress-intro h2 {
+  color: var(--royal-blue);
+  font-size: clamp(24px, 2.7vw, 35px);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.progress-intro p {
+  margin-top: 6px;
+
+  color: var(--muted-text);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* BACK BUTTON */
+
+.back-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #d1e5fc;
+  border-radius: 11px;
+
+  background: #eef7ff;
+  color: var(--royal-blue);
+
+  font-size: 11px;
+  font-weight: 900;
+
+  transition: 0.2s ease;
+}
+
+.back-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+.back-button:hover {
+  background: #dcefff;
+  transform: translateX(-2px);
+}
+
+/* =========================================
+   ROYAL BLUE STUDENT PROFILE
+   ========================================= */
+
+.student-profile-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr) 115px;
+  align-items: center;
+  gap: 25px;
+
+  padding: 22px 27px;
+  min-height: 205px;
+
+  border: 1px solid #1915ad;
+  border-radius: 21px;
+
+  background:
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(41, 169, 223, 0.33),
+      transparent 37%
+    ),
+    linear-gradient(
+      115deg,
+      #0800a4 0%,
+      #1116ac 65%,
+      #0753bf 100%
+    );
+
+  box-shadow:
+    0 9px 25px rgba(8, 0, 164, 0.12);
+
+  color: #ffffff;
+}
+
+/* PHOTO */
+
+.student-photo-frame {
+  width: 155px;
+  height: 155px;
+
+  overflow: hidden;
+  border-radius: 18px;
+
+  background: white;
+  border: 4px solid rgba(255,255,255,0.85);
+
+  box-shadow:
+    0 6px 17px rgba(0,0,0,0.13);
+}
+
+.student-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+/* STUDENT INFO */
+
+.student-info {
+  min-width: 0;
+}
+
+.student-eyebrow {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--lime);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+}
+
+.student-name-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.student-name-line h3 {
+  color: #ffffff;
+
+  font-size: clamp(19px, 2.2vw, 27px);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+/* CLASS BADGES */
+
+.class-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 12px;
+
+  border-radius: 30px;
+
+  font-size: 10px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.class-badge.physical {
+  color: #0800a4;
+  background: #eaf4ff;
+}
+
+.class-badge.online {
+  color: #17254b;
+  background: var(--lime);
+}
+
+/* AGE */
+
+.student-age {
+  display: flex;
+  gap: 7px;
+
+  margin: 7px 0 12px;
+
+  color: #e3eaff;
+  font-size: 12px;
+}
+
+.student-age span {
+  color: #b8d1ff;
+  font-weight: 700;
+}
+
+.student-age strong {
+  font-weight: 800;
+}
+
+/* CLASS & LOCATION */
+
+.student-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 9px;
+}
+
+.student-detail-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.student-detail-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.student-detail-text {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.student-detail-text span {
+  color: #bfd0ff;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.student-detail-text strong {
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* DECORATION */
+
+.student-decoration {
+  text-align: center;
+}
+
+.decoration-ring {
+  width: 92px;
+  height: 92px;
+
+  margin: 0 auto 9px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.20);
+}
+
+.decoration-ring span {
+  color: var(--lime);
+  font-size: 53px;
+}
+
+.student-decoration p {
+  color: #e2edff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* =========================================
+   LEARNING MODULES SECTION
+   ========================================= */
+
+.learning-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.learning-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.learning-heading h2 {
+  color: var(--royal-blue);
+
+  font-size: 22px;
+  font-weight: 900;
+
+  margin-bottom: 4px;
+}
+
+.learning-heading p {
+  color: var(--muted-text);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.module-count {
+  flex-shrink: 0;
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+  border: 1px solid #d5e9ff;
+
+  background: #eaf5ff;
+  color: #0800a4;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* =========================================
+   MODULE CARDS
+   ========================================= */
+
+.modules-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.module-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  min-width: 0;
+  min-height: 127px;
+
+  padding: 17px 20px;
+
+  border: 1px solid #dfe7f1;
+  border-left: 4px solid var(--bright-blue);
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 17px rgba(20, 55, 105, 0.05);
+
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+.module-card:nth-child(2) {
+  border-left-color: #0800a4;
+}
+
+.module-card:nth-child(3) {
+  border-left-color: #a7dc00;
+}
+
+.module-card:nth-child(4) {
+  border-left-color: #29a9df;
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #b8d7ff;
+
+  box-shadow:
+    0 11px 25px rgba(20, 55, 105, 0.11);
+}
+
+/* 3D ICONS */
+
+.module-image-box {
+  width: 83px;
+  height: 83px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: #f2f8ff;
+  border-radius: 15px;
+}
+
+.module-image-box img {
+  display: block;
+  width: 76px;
+  height: 76px;
+
+  object-fit: contain;
+  border-radius: 11px;
+}
+
+/* MODULE TEXT */
+
+.module-text {
+  flex: 1;
+  min-width: 0;
+  padding-right: 8px;
+}
+
+.module-text h3 {
+  color: #0800a4;
+
+  font-size: 16px;
+  font-weight: 900;
+
+  margin-bottom: 7px;
+}
+
+.module-text p {
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.module-arrow {
+  position: absolute;
+
+  right: 17px;
+  bottom: 12px;
+
+  color: #0800a4;
+  font-size: 21px;
+  font-weight: 900;
+
+  transition: transform 0.2s;
+}
+
+.module-card:hover .module-arrow {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   SIDEBAR - EXTRA MODULES
+   ========================================= */
+
+.sidebar-nav .sidebar-divider {
+  margin: 8px 0;
+}
+
+.module-nav {
+  cursor: pointer;
+}
+
+.module-nav .nav-icon img {
+  border-radius: 5px;
+}
+
+/* =========================================
+   TEMPORARY MESSAGE
+   ========================================= */
+
+.module-toast {
+  position: fixed;
+  z-index: 100;
+
+  left: 50%;
+  bottom: 25px;
+
+  transform: translateX(-50%);
+
+  width: min(430px, calc(100% - 30px));
+
+  padding: 15px 20px;
+
+  border-radius: 13px;
+  background: #0800a4;
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(8, 0, 164, 0.20);
+
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================
+   SHORT LAPTOP SCREENS
+   ========================================= */
+
+@media (min-width: 1001px)
+       and (max-height: 820px) {
+
+  .progress-content {
+    gap: 12px;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .page-badge {
+    margin-bottom: 5px;
+    padding: 5px 11px;
+  }
+
+  .progress-intro h2 {
+    font-size: 27px;
+  }
+
+  .student-profile-card {
+    min-height: 175px;
+
+    grid-template-columns:
+      125px minmax(0, 1fr) 90px;
+
+    gap: 18px;
+    padding: 13px 20px;
+  }
+
+  .student-photo-frame {
+    width: 125px;
+    height: 125px;
+  }
+
+  .decoration-ring {
+    width: 70px;
+    height: 70px;
+  }
+
+  .decoration-ring span {
+    font-size: 38px;
+  }
+
+  .learning-section {
+    gap: 10px;
+  }
+
+  .modules-grid {
+    gap: 11px;
+  }
+
+  .module-card {
+    min-height: 107px;
+    padding: 11px 15px;
+  }
+
+  .module-image-box {
+    width: 69px;
+    height: 69px;
+  }
+
+  .module-image-box img {
+    width: 63px;
+    height: 63px;
+  }
+
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1050px) {
+
+  .student-profile-card {
+    grid-template-columns:
+      125px minmax(0, 1fr);
+
+    gap: 20px;
+  }
+
+  .student-photo-frame {
+    width: 125px;
+    height: 135px;
+  }
+
+  .student-decoration {
+    display: none;
+  }
+
+  .module-card {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .module-image-box {
+    width: 66px;
+    height: 66px;
+  }
+
+  .module-image-box img {
+    width: 61px;
+    height: 61px;
+  }
+
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .progress-content {
+    padding: 18px 16px;
+    gap: 20px;
+  }
+
+  .progress-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .progress-intro h2 {
+    font-size: 27px;
+  }
+
+  .back-button {
+    padding: 9px 12px;
+  }
+
+  .student-profile-card {
+    grid-template-columns: 1fr;
+    gap: 17px;
+
+    padding: 20px;
+  }
+
+  .student-photo-frame {
+    width: 132px;
+    height: 132px;
+  }
+
+  .student-name-line h3 {
+    font-size: 23px;
+  }
+
+  .learning-heading h2 {
+    font-size: 20px;
+  }
+
+  .learning-heading p {
+    font-size: 11px;
+  }
+
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-card {
+    min-height: 112px;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .learning-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .module-text h3 {
+    font-size: 14px;
+  }
+
+  .module-image-box {
+    width: 59px;
+    height: 59px;
+  }
+
+  .module-image-box img {
+    width: 54px;
+    height: 54px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .module-card,
+  .module-arrow,
+  .back-button {
+    transition: none;
+  }
+
+}

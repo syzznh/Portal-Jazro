@@ -1,0 +1,519 @@
+
+/* ========================================
+   JAZRO PARENT DASHBOARD
+   PAGE-SPECIFIC STYLING
+   ======================================== */
+
+/* MAIN DASHBOARD AREA */
+
+.dashboard-content {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+  padding: clamp(17px, 2.5vh, 30px)
+           clamp(20px, 3vw, 43px);
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 2.3vh, 24px);
+
+  flex: 1;
+}
+
+/* ========================================
+   WELCOME BANNER
+   ======================================== */
+
+.welcome-banner {
+  position: relative;
+  isolation: isolate;
+
+  min-height: 185px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 26px 35px;
+
+  border-radius: 19px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 73% 45%,
+      #1867d6 0%,
+      transparent 37%
+    ),
+    linear-gradient(
+      115deg,
+      #0800a4 0%,
+      #0739b0 100%
+    );
+
+  color: white;
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+
+  width: 70%;
+  max-width: 650px;
+}
+
+.banner-label {
+  display: inline-block;
+  margin-bottom: 13px;
+
+  color: var(--lime);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.banner-text h2 {
+  color: var(--white);
+  font-size: clamp(22px, 2.3vw, 32px);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.banner-text h2 span {
+  color: var(--lime);
+}
+
+.banner-text p {
+  max-width: 490px;
+  margin-top: 10px;
+
+  color: #e0eaff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.banner-robot {
+  position: absolute;
+  z-index: 1;
+
+  right: 15px;
+  bottom: -33px;
+
+  width: 205px;
+  height: 205px;
+
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.banner-decoration {
+  position: absolute;
+  right: -60px;
+  top: -130px;
+  z-index: 0;
+
+  width: 300px;
+  height: 300px;
+
+  border: 50px solid rgba(255,255,255,0.055);
+  border-radius: 50%;
+}
+
+/* ========================================
+   SECTION HEADING
+   ======================================== */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-heading h2 {
+  color: var(--royal-blue);
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.section-heading p {
+  color: var(--muted-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.overview-tag {
+  padding: 7px 15px;
+
+  background: #ecf6ff;
+  color: #0878c6;
+
+  border: 1px solid #d6ebff;
+  border-radius: 30px;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* ========================================
+   OVERVIEW CARDS
+   ======================================== */
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.overview-card {
+  min-width: 0;
+  min-height: 157px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 20px;
+
+  background: white;
+  border: 1px solid #e0e9f3;
+  border-radius: 16px;
+
+  box-shadow: 0 6px 22px rgba(29, 65, 116, 0.045);
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.overview-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 26px rgba(29, 65, 116, 0.10);
+}
+
+.stat-icon {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+}
+
+.stat-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.blue-icon {
+  background: #e9e8ff;
+  color: #0800a4;
+}
+
+.cyan-icon {
+  background: #e3f6ff;
+  color: #0898d8;
+}
+
+.lime-icon {
+  background: #effcce;
+  color: #618900;
+}
+
+.grey-icon {
+  background: #edf1f6;
+  color: #64748b;
+}
+
+.stat-details {
+  min-width: 0;
+}
+
+.stat-number {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--royal-blue);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.stat-number.pending {
+  color: #94a3b8;
+}
+
+.stat-details h3 {
+  color: #22334c;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.stat-details p {
+  margin-top: 5px;
+
+  color: var(--muted-text);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* ========================================
+   MY CHILDREN SHORTCUT
+   ======================================== */
+
+.children-shortcut {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  min-height: 105px;
+
+  padding: 20px 25px;
+
+  background: #edf7ff;
+  border: 1px solid #d5eaff;
+  border-left: 5px solid var(--royal-blue);
+
+  border-radius: 15px;
+}
+
+.shortcut-icon {
+  flex-shrink: 0;
+
+  width: 51px;
+  height: 51px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+  background: var(--royal-blue);
+  color: white;
+}
+
+.shortcut-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.shortcut-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.shortcut-text h3 {
+  color: var(--royal-blue);
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.shortcut-text p {
+  color: #58748f;
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.shortcut-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 13px 17px;
+
+  background: var(--royal-blue);
+  border-radius: 11px;
+
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+
+  transition: 0.2s;
+}
+
+.shortcut-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+.shortcut-button:hover {
+  background: #143bd2;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   SHORT LAPTOP DISPLAYS
+   ======================================== */
+
+@media (min-width: 1001px) and (max-height: 800px) {
+
+  .dashboard-content {
+    gap: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .welcome-banner {
+    min-height: 155px;
+    padding: 19px 27px;
+  }
+
+  .banner-robot {
+    width: 178px;
+    height: 178px;
+  }
+
+  .overview-card {
+    min-height: 142px;
+    padding: 15px;
+    gap: 9px;
+  }
+
+  .stat-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .stat-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .stat-number {
+    font-size: 28px;
+  }
+
+  .children-shortcut {
+    min-height: 86px;
+    padding: 14px 20px;
+  }
+
+}
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 1100px) {
+
+  .overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .overview-card {
+    min-height: 125px;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .welcome-banner {
+    padding: 25px;
+  }
+
+  .banner-robot {
+    width: 140px;
+    height: 140px;
+    right: 0;
+    bottom: -15px;
+  }
+
+  .banner-text {
+    width: 80%;
+  }
+
+}
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+  .dashboard-content {
+    padding: 20px 17px;
+    gap: 22px;
+  }
+
+  .welcome-banner {
+    padding: 23px;
+    min-height: 200px;
+  }
+
+  .banner-text {
+    width: 100%;
+  }
+
+  .banner-text h2 {
+    max-width: 310px;
+    font-size: 23px;
+  }
+
+  .banner-text p {
+    max-width: 260px;
+    font-size: 11px;
+  }
+
+  .banner-robot {
+    width: 95px;
+    height: 95px;
+    right: -8px;
+    bottom: -10px;
+  }
+
+  .section-heading h2 {
+    font-size: 19px;
+  }
+
+  .section-heading p {
+    font-size: 11px;
+  }
+
+  .overview-grid {
+    gap: 12px;
+  }
+
+  .overview-card {
+    min-height: 150px;
+    padding: 15px;
+  }
+
+  .stat-number {
+    font-size: 29px;
+  }
+
+  .stat-details h3 {
+    font-size: 12px;
+  }
+
+  .children-shortcut {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .shortcut-button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 370px) {
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,634 @@
+
+/* ========================================
+   JAZRO PARENT PORTAL
+   GLOBAL / SHARED DESIGN SYSTEM
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --royal-blue: #0800a4;
+  --deep-blue: #060071;
+  --bright-blue: #29a9df;
+  --lime: #c7fb00;
+  --white: #ffffff;
+  --soft-bg: #f8fafc;
+  --dark-text: #1e293b;
+  --muted-text: #64748b;
+  --border: #e2e8f0;
+
+  --sidebar-width: 245px;
+  --header-height: 85px;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Nunito", Arial, sans-serif;
+  background: var(--white);
+  color: var(--dark-text);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ========================================
+   APPLICATION LAYOUT
+   ======================================== */
+
+.app-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app-main {
+  min-width: 0;
+  flex: 1;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--white);
+}
+
+/* ========================================
+   SIDEBAR
+   ======================================== */
+
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  height: 100dvh;
+  flex-shrink: 0;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px 16px 20px;
+
+  background:
+    linear-gradient(
+      155deg,
+      #0800a4 0%,
+      #09018a 55%,
+      #060065 100%
+    );
+
+  color: var(--white);
+}
+
+
+/* ======================================
+   JAZRO NEW SIDEBAR LOGO
+   ====================================== */
+
+.sidebar-brand {
+  width: 100%;
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 4px;
+}
+
+/* NEW FULL PORTAL LOGO */
+
+.sidebar-logo {
+  display: block;
+
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 300px;
+
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+
+.sidebar-brand-name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  color: var(--white);
+}
+
+.sidebar-brand-name small {
+  color: var(--lime);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.sidebar-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 17px 0;
+
+  background: rgba(255,255,255,0.18);
+}
+
+/* SIDEBAR NAVIGATION */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-section-label {
+  padding: 7px 15px 9px;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+
+  color: #a5b0ea;
+}
+
+.nav-item {
+  position: relative;
+
+  width: 100%;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 15px;
+
+  border: none;
+  border-radius: 11px;
+  background: transparent;
+
+  text-align: left;
+  color: #d7ddff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.12);
+  color: var(--white);
+}
+
+.nav-item.active {
+  background: rgba(255,255,255,0.17);
+  color: var(--white);
+}
+
+.nav-item.active::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+
+  width: 4px;
+  height: 28px;
+
+  border-radius: 0 4px 4px 0;
+  background: var(--lime);
+}
+
+.nav-icon {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+}
+
+.nav-icon img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+.nav-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+/* BOTTOM SIDEBAR */
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.logout-item {
+  color: #f2f4ff;
+}
+
+.sidebar-footer {
+  margin-top: 16px;
+  padding-left: 15px;
+
+  color: #9ba5de;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ========================================
+   TOP HEADER
+   ======================================== */
+
+.top-header {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  height: var(--header-height);
+  min-height: var(--header-height);
+
+  padding: 0 clamp(20px, 3vw, 45px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.top-header::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    var(--royal-blue),
+    var(--bright-blue),
+    var(--lime)
+  );
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-page-title h1 {
+  color: var(--royal-blue);
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.header-page-title span {
+  display: block;
+  margin-top: 4px;
+
+  color: var(--muted-text);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ========================================
+   NOTIFICATION BUTTON
+   ======================================== */
+
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-btn {
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  background: #eef6ff;
+  color: var(--royal-blue);
+
+  border: 1px solid #dbeaff;
+  border-radius: 12px;
+
+  transition: 0.2s;
+}
+
+.notification-btn:hover {
+  background: #e0f0ff;
+}
+
+.notification-btn svg {
+  width: 21px;
+  height: 21px;
+}
+
+/* NOTIFICATION PANEL */
+
+.notification-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 15px);
+
+  width: 290px;
+
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+
+  box-shadow: 0 12px 35px rgba(23, 48, 90, 0.15);
+
+  overflow: hidden;
+}
+
+.notification-heading {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  color: var(--royal-blue);
+  font-size: 14px;
+}
+
+.notification-empty {
+  text-align: center;
+  padding: 28px 15px;
+}
+
+.notification-empty > span {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.notification-empty p {
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.notification-empty small {
+  color: var(--muted-text);
+  font-size: 11px;
+}
+
+/* ========================================
+   PARENT PROFILE
+   ======================================== */
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding-left: 17px;
+  border-left: 1px solid var(--border);
+}
+
+.profile-avatar {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--bright-blue),
+    var(--royal-blue)
+  );
+
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.profile-info span {
+  color: var(--muted-text);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.profile-info strong {
+  font-size: 13px;
+  color: var(--dark-text);
+  font-weight: 900;
+}
+
+/* ========================================
+   SHARED FOOTER
+   ======================================== */
+
+.app-footer {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 35px;
+
+  border-top: 1px solid var(--border);
+
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ========================================
+   MOBILE NAVIGATION
+   ======================================== */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background: #f3f8ff;
+  color: var(--royal-blue);
+}
+
+.mobile-menu-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 19;
+
+  border: none;
+  background: rgba(9, 20, 45, 0.45);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 950px) {
+
+  :root {
+    --sidebar-width: 205px;
+  }
+
+  .sidebar {
+    padding: 20px 12px;
+  }
+
+
+  .sidebar-brand-name {
+    font-size: 16px;
+  }
+
+  .nav-item {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  :root {
+    --sidebar-width: 245px;
+    --header-height: 73px;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+
+    box-shadow: 10px 0 30px rgba(0,0,0,0.15);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-btn {
+    display: grid;
+    place-items: center;
+  }
+
+  .top-header {
+    padding: 0 17px;
+  }
+
+  .header-page-title h1 {
+    font-size: 19px;
+  }
+
+  .header-page-title span {
+    font-size: 10px;
+  }
+
+  .header-left,
+  .header-right {
+    gap: 9px;
+  }
+
+  .header-profile {
+    padding-left: 9px;
+  }
+
+  .profile-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .notification-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .app-footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 13px;
+  }
+
+}
+
+/* ACCESSIBILITY */
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--bright-blue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
