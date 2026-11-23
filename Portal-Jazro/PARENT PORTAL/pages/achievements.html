@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements | JAZRO Parent Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/achievements.css">
+  <script src="../js/achievements.js" defer></script>
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand"><img src="../assets/images/logo jazro 1.png" alt="JAZRO Learning & Student Progress Portal" class="sidebar-logo"></div>
+    <div class="sidebar-divider"></div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <span class="nav-section-label">MAIN MENU</span>
+      <a href="dashboard.php" class="nav-item"><span class="nav-icon"><img src="../assets/icons/dashboard-icon.png" alt=""></span><span>Dashboard</span></a>
+      <a href="my-children.html" class="nav-item"><span class="nav-icon"><img src="../assets/icons/mychildren-icon.png" alt=""></span><span>My Children</span></a>
+      <div class="sidebar-divider"></div>
+      <span class="nav-section-label">STUDENT LEARNING</span>
+      <a href="child-dashboard.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 11h8M8 15h5"></path></svg></span><span>Student Progress</span></a>
+      <button type="button" class="nav-item module-nav" data-go="class-notes.html"><span class="nav-icon"><img src="../assets/icons/classnotes-icon.png" alt=""></span><span>Class Notes</span></button>
+      <button type="button" class="nav-item module-nav" data-go="assessments.html"><span class="nav-icon"><img src="../assets/icons/assessments-icon.png" alt=""></span><span>Assessments</span></button>
+      <a href="achievements.html" class="nav-item active" aria-current="page"><span class="nav-icon"><img src="../assets/icons/reportcard-icon.png" alt=""></span><span>Achievements</span></a>
+      <button type="button" class="nav-item module-nav" id="recordingSidebar" data-go="#" hidden><span class="nav-icon"><img src="../assets/icons/onlinerecordings-icon.png" alt=""></span><span>Online Recordings</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-divider"></div>
+      <button type="button" class="nav-item logout-item" id="sidebarLogout"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17l5-5-5-5"></path><path d="M15 12H3"></path><path d="M12 3h6a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3h-6"></path></svg></span><span>Log Out</span></button>
+      <p class="sidebar-footer">JAZRO © <span id="sidebarYear"></span></p>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <header class="top-header">
+      <div class="header-left">
+        <button type="button" class="mobile-menu-btn" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        <div class="header-page-title"><h1 id="headerStudentTitle">Achievements</h1><span>Certificates & Learning Reports</span></div>
+      </div>
+      <div class="header-right">
+        <div class="notification-wrapper">
+          <button type="button" class="notification-btn" id="notificationBtn" aria-label="Notifications" aria-expanded="false" aria-controls="notificationPanel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg></button>
+          <div class="notification-panel" id="notificationPanel" hidden><div class="notification-heading"><strong>Notifications</strong></div><div class="notification-empty"><span>🔔</span><p>No notifications yet.</p><small>Your updates will appear here.</small></div></div>
+        </div>
+        <div class="header-profile"><div class="profile-avatar">P</div><div class="profile-info"><span>Parent Account</span><strong>Parent</strong></div></div>
+      </div>
+    </header>
+
+    <main class="achievements-content">
+      <section class="page-heading">
+        <div>
+          <div class="page-badge">✦ CELEBRATING PROGRESS</div>
+          <h2>Achievements</h2>
+          <p>Celebrate your child's milestones and keep track of their learning journey.</p>
+        </div>
+        <a href="child-dashboard.html" class="back-button"><span aria-hidden="true">←</span> Back to Student Progress</a>
+      </section>
+
+      <section class="student-mini-card">
+        <div class="mini-avatar"><img id="studentPhoto" src="../assets/images/pfp-boy.png" alt="Student profile"></div>
+        <div class="mini-info"><span>VIEWING ACHIEVEMENTS FOR</span><h3 id="studentName">Selected Student</h3><p id="studentClass">Class details will appear here</p></div>
+        <span class="mini-star" aria-hidden="true">✦</span>
+      </section>
+
+      <section class="achievement-overview">
+        <div class="overview-item"><span class="overview-icon certificate-icon">🏅</span><div><strong>Certificates</strong><small>Recognition & milestones</small></div></div>
+        <div class="overview-item"><span class="overview-icon report-icon">📘</span><div><strong>Report Cards</strong><small>Learning performance</small></div></div>
+      </section>
+
+      <section class="achievement-panel">
+        <div class="tabs" role="tablist" aria-label="Achievement categories">
+          <button class="tab-button active" id="certificatesTab" type="button" role="tab" aria-selected="true" aria-controls="certificatesPanel">🏅 Certificates</button>
+          <button class="tab-button" id="reportsTab" type="button" role="tab" aria-selected="false" aria-controls="reportsPanel">📘 Report Cards</button>
+        </div>
+
+        <div class="tab-panel" id="certificatesPanel" role="tabpanel" aria-labelledby="certificatesTab">
+          <div class="panel-heading"><div><h3>Certificates of Achievement</h3><p>Special moments and accomplishments from your child's learning journey.</p></div><span class="sample-label">UI PREVIEW</span></div>
+          <div class="certificate-grid" id="certificateGrid">
+            <article class="certificate-card">
+              <div class="certificate-art">
+                <span class="cert-topline">JAZRO ROBOTICS ACADEMY</span><div class="cert-medal">★</div><span class="cert-small">CERTIFICATE OF</span><strong>ACHIEVEMENT</strong><span class="cert-recipient">Student Name</span><span class="cert-description">For outstanding effort and participation</span><span class="cert-ribbon">✦ WELL DONE ✦</span>
+              </div>
+              <div class="certificate-details"><div><h4>Robotics Achievement</h4><p>Achievement date: 15 October 2026</p></div><button type="button" class="outline-button preview-certificate">Preview</button></div>
+            </article>
+            <article class="certificate-card">
+              <div class="certificate-art certificate-art-blue">
+                <span class="cert-topline">JAZRO ROBOTICS ACADEMY</span><div class="cert-medal">✦</div><span class="cert-small">CERTIFICATE OF</span><strong>PARTICIPATION</strong><span class="cert-recipient">Student Name</span><span class="cert-description">For successfully completing a learning activity</span><span class="cert-ribbon">✦ KEEP IT UP ✦</span>
+              </div>
+              <div class="certificate-details"><div><h4>Class Participation</h4><p>Achievement date: 02 September 2026</p></div><button type="button" class="outline-button preview-certificate">Preview</button></div>
+            </article>
+          </div>
+          <p class="preview-note">The certificates shown here are sample UI content only. They are not actual student records.</p>
+        </div>
+
+        <div class="tab-panel" id="reportsPanel" role="tabpanel" aria-labelledby="reportsTab" hidden>
+          <div class="panel-heading report-heading"><div><h3>Student Report Card</h3><p>A summary of your child's performance and tutor feedback.</p></div><label class="term-select-wrap" for="termSelect">Select term<select id="termSelect"><option value="term3">Term 3 · 2026</option><option value="term2">Term 2 · 2026</option><option value="term1">Term 1 · 2026</option></select></label></div>
+
+          <div class="report-summary">
+            <div class="report-student"><span>STUDENT</span><strong id="reportStudentName">Student Name</strong><small id="reportStudentClass">Class details</small></div>
+            <div class="overall-score"><span>OVERALL PERFORMANCE</span><strong id="overallScore">88%</strong><small id="overallGrade">Excellent progress</small></div>
+          </div>
+
+          <div class="report-section-title"><h4>Learning Performance</h4><span id="reportTermLabel">Term 3 · 2026</span></div>
+          <div class="performance-table-wrap">
+            <table class="performance-table">
+              <thead><tr><th>Learning Area</th><th>Score</th><th>Performance</th></tr></thead>
+              <tbody id="performanceRows">
+                <tr><td>Robotics Knowledge</td><td>90%</td><td><span class="performance-pill excellent">Excellent</span></td></tr>
+                <tr><td>Coding Skills</td><td>85%</td><td><span class="performance-pill good">Very Good</span></td></tr>
+                <tr><td>Problem Solving</td><td>88%</td><td><span class="performance-pill excellent">Excellent</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tutor-remark"><div class="remark-icon">💬</div><div><span>TUTOR'S REMARKS</span><p id="tutorRemark">You have shown good understanding of the topics covered this term. Keep practising your coding skills and continue asking questions. Well done!</p></div></div>
+          <div class="report-actions"><p class="preview-note">This report card is sample UI content for layout review only.</p><button type="button" class="primary-button" id="printReport">Print / Save as PDF <span>↗</span></button></div>
+        </div>
+      </section>
+    </main>
+    <footer class="app-footer"><p>© <span id="currentYear"></span> JAZRO Robotic Academy.</p><span>Learning & Student Progress Portal</span></footer>
+  </div>
+</div>
+
+<button type="button" class="sidebar-backdrop" id="sidebarBackdrop" aria-label="Close navigation" hidden></button>
+
+<div class="modal-backdrop" id="certificateModal" hidden>
+  <div class="certificate-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal-close" id="closeCertificateModal" aria-label="Close preview">×</button>
+    <div class="certificate-art modal-certificate-art">
+      <span class="cert-topline">JAZRO ROBOTICS ACADEMY</span><div class="cert-medal">★</div><span class="cert-small">CERTIFICATE OF</span><strong id="modalTitle">ACHIEVEMENT</strong><span class="cert-recipient" id="modalStudentName">Student Name</span><span class="cert-description">For outstanding effort and participation</span><span class="cert-ribbon">✦ WELL DONE ✦</span>
+    </div>
+    <p class="modal-caption">Sample certificate preview</p>
+    <button type="button" class="primary-button" id="printCertificate">Print / Save as PDF <span>↗</span></button>
+  </div>
+</div>
+</body>
+</html>

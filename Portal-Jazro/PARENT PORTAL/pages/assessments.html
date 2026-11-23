@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Assessments | JAZRO Parent Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/global.css"><link rel="stylesheet" href="../css/child-dashboard.css"><link rel="stylesheet" href="../css/assessment.css">
+<script src="../js/assessments.js" defer></script></head><body><div class="app-layout">
+<aside class="sidebar" id="sidebar"><div class="sidebar-brand"><img src="../assets/images/logo jazro 1.png" alt="JAZRO Learning & Student Progress Portal" class="sidebar-logo"></div>
+<div class="sidebar-divider"></div><nav class="sidebar-nav" aria-label="Main navigation"><span class="nav-section-label">MAIN MENU</span>
+<a href="dashboard.php" class="nav-item"><span class="nav-icon"><img src="../assets/icons/dashboard-icon.png" alt=""></span><span>Dashboard</span></a>
+<a href="my-children.html" class="nav-item"><span class="nav-icon"><img src="../assets/icons/mychildren-icon.png" alt=""></span><span>My Children</span></a>
+<div class="sidebar-divider"></div><span class="nav-section-label">STUDENT LEARNING</span>
+<a href="child-dashboard.html" class="nav-item"><span class="nav-icon">▣</span><span>Student Progress</span></a>
+<a href="class-notes.html" class="nav-item"><span class="nav-icon"><img src="../assets/icons/classnotes-icon.png" alt=""></span><span>Class Notes</span></a>
+<a href="assessments.html" class="nav-item active" aria-current="page"><span class="nav-icon"><img src="../assets/icons/assessments-icon.png" alt=""></span><span>Assessments</span></a>
+<a href="achievements.html" class="nav-item"><span class="nav-icon"><img src="../assets/icons/reportcard-icon.png" alt=""></span><span>Achievements</span></a>
+<button type="button" class="nav-item" onclick="alert('Online Recordings page is coming soon.')"><span class="nav-icon"><img src="../assets/icons/onlinerecordings-icon.png" alt=""></span><span>Online Recordings</span></button></nav>
+<div class="sidebar-bottom"><div class="sidebar-divider"></div><button type="button" class="nav-item logout-item" id="sidebarLogout"><span class="nav-icon">⇥</span><span>Log Out</span></button><p class="sidebar-footer">JAZRO © <span id="sidebarYear"></span></p></div></aside>
+<div class="app-main"><header class="top-header"><div class="header-left"><button type="button" class="mobile-menu-btn" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
+<div class="header-page-title"><h1>Assessments</h1><span>Assessment Overview</span></div></div><div class="header-right"><div class="header-profile"><div class="profile-avatar">P</div><div class="profile-info"><span>Parent Account</span><strong>Parent</strong></div></div></div></header>
+<main class="assessment-content"><div class="assessment-breadcrumb"><a href="child-dashboard.html">Student Progress</a><span>›</span><strong>Assessments</strong></div>
+<section class="assessment-heading"><div class="assessment-heading-icon">▤</div><div><h2>Assessments</h2><p>View and complete your child's available assessments.</p></div></section>
+<div class="assessment-student-strip"><span>👤</span><strong id="assessmentStudentName">Selected Student</strong><span class="dot">•</span><span id="assessmentStudentClass">Student Class</span><span class="dot">•</span><span class="type" id="assessmentClassType">Class Type</span></div>
+<section class="assessment-card"><div class="assessment-card-icon">📋</div><div class="assessment-card-main">
+<div class="assessment-card-top"><h3 id="assessmentTitle">JTC Level 2 Assessment</h3><span class="status-available">✓ Available</span></div>
+<p id="assessmentDescription">Assessment for JTC Level 2 students.</p>
+<div class="assessment-meta"><span>🏆 Total Marks: 100</span><span>☷ Questions: To be announced</span><span>📘 JTC Level 2 - Revision</span></div></div>
+<button type="button" class="assessment-primary-btn" id="startAssessmentBtn">Start Assessment →</button></section>
+<section class="assessment-info-panel"><div class="assessment-info-icon">ℹ</div><div><h3>Assessment Information</h3><p>Assessment questions will be provided by JAZRO. Once published, your child will be able to answer the questions directly through this portal.</p></div>
+<div class="assessment-decoration"><img src="../assets/images/robotblur.png" alt=""></div></section>
+<div class="assessment-bottom-art"><img src="../assets/images/robotthumb.png" alt=""></div></main><footer class="app-footer"><p>© <span id="currentYear"></span> JAZRO Robotic Academy.</p><span>Learning &amp; Student Progress Portal</span></footer></div></div>
+<button type="button" class="sidebar-backdrop" id="sidebarBackdrop" aria-label="Close navigation" hidden></button></body></html>

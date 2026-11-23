@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Progress | JAZRO Parent Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/child-dashboard.css">
+  <script src="../js/child-dashboard.js" defer></script>
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand"><img src="../assets/images/logo jazro 1.png" alt="JAZRO Learning & Student Progress Portal" class="sidebar-logo"></div>
+    <div class="sidebar-divider"></div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <span class="nav-section-label">MAIN MENU</span>
+      <a href="dashboard.php" class="nav-item"><span class="nav-icon"><img src="../assets/icons/dashboard-icon.png" alt=""></span><span>Dashboard</span></a>
+      <a href="my-children.html" class="nav-item"><span class="nav-icon"><img src="../assets/icons/mychildren-icon.png" alt=""></span><span>My Children</span></a>
+      <div class="sidebar-divider"></div>
+      <span class="nav-section-label">STUDENT LEARNING</span>
+      <a href="child-dashboard.html" class="nav-item active" aria-current="page">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 11h8M8 15h5"></path></svg></span><span>Student Progress</span>
+      </a>
+      <button type="button" class="nav-item module-nav" data-module="notes"><span class="nav-icon"><img src="../assets/icons/classnotes-icon.png" alt=""></span><span>Class Notes</span></button>
+      <button type="button" class="nav-item module-nav" data-module="assessments"><span class="nav-icon"><img src="../assets/icons/assessments-icon.png" alt=""></span><span>Assessments</span></button>
+      <button type="button" class="nav-item module-nav" data-module="achievements"><span class="nav-icon"><img src="../assets/icons/reportcard-icon.png" alt=""></span><span>Achievements</span></button>
+      <button type="button" class="nav-item module-nav" data-module="recordings" id="recordingSidebar" hidden><span class="nav-icon"><img src="../assets/icons/onlinerecordings-icon.png" alt=""></span><span>Online Recordings</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-divider"></div>
+      <button type="button" class="nav-item logout-item" id="sidebarLogout"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17l5-5-5-5"></path><path d="M15 12H3"></path><path d="M12 3h6a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3h-6"></path></svg></span><span>Log Out</span></button>
+      <p class="sidebar-footer">JAZRO © <span id="sidebarYear"></span></p>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <header class="top-header">
+      <div class="header-left">
+        <button type="button" class="mobile-menu-btn" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+        <div class="header-page-title"><h1 id="headerStudentTitle">Student Progress</h1><span>Learning Progress Overview</span></div>
+      </div>
+      <div class="header-right">
+        <div class="notification-wrapper">
+          <button type="button" class="notification-btn" id="notificationBtn" aria-label="Notifications" aria-expanded="false" aria-controls="notificationPanel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg>
+          </button>
+          <div class="notification-panel" id="notificationPanel" hidden><div class="notification-heading"><strong>Notifications</strong></div><div class="notification-empty"><span>🔔</span><p>No notifications yet.</p><small>Your updates will appear here.</small></div></div>
+        </div>
+        <div class="header-profile"><div class="profile-avatar">P</div><div class="profile-info"><span>Parent Account</span><strong>Parent</strong></div></div>
+      </div>
+    </header>
+
+    <main class="progress-content">
+      <section class="progress-intro">
+        <div class="intro-text">
+          <div class="page-badge">✦ STUDENT LEARNING DASHBOARD</div>
+          <h2 id="progressTitle">Student Progress</h2>
+          <p>Explore your child's learning journey, access learning materials and view their progress.</p>
+        </div>
+        <a href="my-children.html" class="back-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5m6 6-6-6 6-6"></path></svg>Back to My Children</a>
+      </section>
+
+      <section class="student-profile-card">
+        <div class="student-photo-frame"><img src="../assets/images/pfp-boy.png" alt="Student profile picture" class="student-photo" id="studentPhoto"></div>
+        <div class="student-info">
+          <span class="student-eyebrow">STUDENT PROFILE</span>
+          <div class="student-name-line"><h3 id="studentName">Student Name</h3><span class="class-badge" id="studentClassType">Class Type</span></div>
+          <p class="student-age"><span>Age:</span><strong id="studentAge">-</strong></p>
+          <div class="student-detail"><div class="student-detail-icon"><img src="../assets/icons/class-icon.png" alt=""></div><div class="student-detail-text"><span>Class</span><strong id="studentClass">Class Name</strong></div></div>
+          <div class="student-detail"><div class="student-detail-icon"><img src="../assets/icons/location-icon.png" alt=""></div><div class="student-detail-text"><span>Location</span><strong id="studentLocation">Location</strong></div></div>
+        </div>
+        <div class="student-decoration" aria-hidden="true"><div class="decoration-ring"><span>✦</span></div><p>Keep Learning!</p></div>
+      </section>
+
+      <section class="learning-section">
+        <div class="learning-heading"><div><h2>Learning Modules</h2><p>Choose a module to explore your child's learning activities.</p></div><span class="module-count" id="moduleCount">3 Modules</span></div>
+        <div class="modules-grid">
+          <button type="button" class="module-card" data-module="notes"><div class="module-image-box"><img src="../assets/icons/classnotes-icon.png" alt=""></div><div class="module-text"><h3>Class Notes</h3><p>Access class notes and learning materials for your child.</p></div><span class="module-arrow">→</span></button>
+          <button type="button" class="module-card" data-module="assessments"><div class="module-image-box"><img src="../assets/icons/assessments-icon.png" alt=""></div><div class="module-text"><h3>Assessments</h3><p>View assessments, completion status and scores.</p></div><span class="module-arrow">→</span></button>
+          <button type="button" class="module-card" data-module="achievements"><div class="module-image-box"><img src="../assets/icons/reportcard-icon.png" alt=""></div><div class="module-text"><h3>Achievements</h3><p>View your child's certificates and report cards in one place.</p></div><span class="module-arrow">→</span></button>
+          <button type="button" class="module-card" data-module="recordings" id="recordingCard" hidden><div class="module-image-box"><img src="../assets/icons/onlinerecordings-icon.png" alt=""></div><div class="module-text"><h3>Online Class Recordings</h3><p>Watch previous online classes and revisit learning sessions.</p></div><span class="module-arrow">→</span></button>
+        </div>
+      </section>
+    </main>
+    <footer class="app-footer"><p>© <span id="currentYear"></span> JAZRO Robotic Academy.</p><span>Learning & Student Progress Portal</span></footer>
+  </div>
+</div>
+<button type="button" class="sidebar-backdrop" id="sidebarBackdrop" aria-label="Close navigation" hidden></button>
+<div class="module-toast" id="moduleToast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
