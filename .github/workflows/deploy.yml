@@ -33,7 +33,7 @@ jobs:
           local-dir: ./Portal-Jazro/
 
           # NEW DOMAIN DIRECTORY
-          server-dir: /jazroHub.ifree.page/htdocs/
+          server-dir: /jazrohub.ifree.page/htdocs/
 
           dangerous-clean-slate: false
 
