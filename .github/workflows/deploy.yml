@@ -28,8 +28,13 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
+
+          # GitHub project directory
           local-dir: ./Portal-Jazro/
-          server-dir: /htdocs/
+
+          # NEW DOMAIN DIRECTORY
+          server-dir: /jazroHub.ifree.page/htdocs/
+
           dangerous-clean-slate: false
 
           exclude: |
@@ -42,9 +47,4 @@ jobs:
             **/.env
             **/.env.*
             **/db.php
-
             **/uploads/**
-            **/*.sql
-            **/.env
-            **/.env.*
-            **/db.php
